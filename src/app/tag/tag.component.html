@@ -1,0 +1,32 @@
+<div class="d-flex flex-column">
+  <div>
+    <ng-container *ngFor="let tag of getTagName()">
+      <div class="badge bg-secondary m-1" (click)="onClick(tag)">
+        {{ tag }}
+      </div>
+    </ng-container>
+  </div>
+
+  <div>
+    <ng-container *ngFor="let tag of getTags()">
+      <div class="badge bg-secondary m-1" (click)="onClick(tag.name)">
+        {{ tag.name }}
+      </div>
+    </ng-container>
+  </div>
+
+  <div>
+    <ng-container *ngFor="let tag of getUsedTags()">
+      <div class="badge bg-secondary m-1" (click)="onClick(tag.name)">
+        {{ tag.name }}
+      </div>
+    </ng-container>
+  </div>
+  <div>
+    <ng-container *ngFor="let tag of getMyTags()">
+      <div class="badge bg-secondary m-1" (click)="onClick1(tag)">
+        {{ tag.name }}
+      </div>
+    </ng-container>
+  </div>
+</div>
